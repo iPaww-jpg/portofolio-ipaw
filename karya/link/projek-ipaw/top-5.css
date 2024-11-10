@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'judul';
+    src: url(font/Fatal\ Distraction.ttf);
+}
+@font-face {
+    font-family: 'menu';
+    src: url(font/ENOCH.ttf);
+}
+@font-face {
+    font-family: 'isi';
+    src: url(font/BrandierTrial-SemiBold.ttf);
+}
+body {
+    background-color: black;
+}
+.header {
+    color: white;
+    background-color: rgba(145, 143, 143, 0.568);
+    height: 100px;
+}
+.judul {
+    font-family: 'judul';
+    font-size: 35px;
+    float: left;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+.list a {
+    font-family: 'menu';
+    text-decoration: none;
+    color: white;
+}
+.list li{
+    position: relative;   
+    list-style: none;
+    float: right;
+    padding-top: 40px;
+    margin-right: 40px;
+}
+.list li:after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+.list li:hover::after{
+    width: 100%;
+}
+h1 {
+    font-size: 50px;
+}
+.pembuka {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    margin-top: 80px;
+    margin-left: 50px;
+}
+.btn-eks {
+    padding-top: 40px;
+    padding-left: 50px;
+}
+.btn-eks a{
+    color: #000;
+    border-radius: 10px;
+    padding: 15px 25px;
+    text-decoration: none;
+    background-color: #f4f4f4;
+}
+.btn-eks a:hover {
+    background-color: #2e2e2e;
+    color: white;
+}
+.contact a{
+    text-decoration: none;
+    color: white;
+    margin-right: 28px;
+    font-size: 35px;
+}
+.contact {
+    padding-left: 50px;
+    padding-top: 100px;
+}
+.foto-makanan {
+    float: right;
+    padding-top: 80px;
+}

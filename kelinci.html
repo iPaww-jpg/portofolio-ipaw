@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <title>Skill Bar</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .skill {
+        margin: 20px;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        /* Mengatur overflow agar bar skill terlihat terpotong saat diisi */
+    }
+
+    .skill-name {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .skill-bar {
+        height: 20px;
+        background-color: #ccc;
+        border-radius: 5px;
+    }
+
+    .skill-level {
+        height: 100%;
+        border-radius: 5px;
+        background-color: #4caf50;
+    }
+
+    /* Animasi AOS untuk skill-level */
+    .skill-level[data-aos="animate-skill"] {
+        width: var(--skill-width, 0);
+        transition: width 1s ease-in-out;
+        max-width: 40%;
+    }
+    .isi {
+        height: 1500px;
+        background-color: #4caf50;
+    }
+</style>
+
+<body>
+    <div class="isi">
+        roro
+    </div>
+    <div class="skill">
+        <div class="skill-name">HTML</div>
+        <div class="skill-bar">
+            <div class="skill-level" style="width: 0;"></div>
+        </div>
+    </div>
+    <div class="skill">
+        <div class="skill-name">CSS</div>
+        <div class="skill-bar">
+            <div class="skill-level" style="width: 0;"></div>
+        </div>
+    </div>
+    <!-- Tambahkan lebih banyak skill di sini jika diperlukan -->
+    <script>
+        AOS.init({
+            once: true, // Ini akan membuat animasi hanya terjadi sekali
+            startEvent: 'load', // Menjalankan animasi setelah halaman sepenuhnya dimuat
+        });
+    </script>
+</body>
+
+</html>

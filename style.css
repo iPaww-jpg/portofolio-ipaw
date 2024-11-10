@@ -1,0 +1,552 @@
+:root {
+  --scroll-duration: 1.5s; /* Durasi scrolling dalam detik */
+  --scroll-timing-function: ease-in-out; /* Fungsi waktu scrolling */
+}
+@font-face {
+    font-family: 'judul';
+    src: url(font/Fatal\ Distraction.ttf);
+}
+@font-face {
+    font-family: 'menu';
+    src: url(font/Sanset.ttf);
+}
+body {
+    scroll-behavior: smooth;
+    scroll-behavior: var(--scroll-duration) var(--scroll-timing-function);
+    margin: 0;
+    padding: 0;
+    top: -10;
+    color: white;
+}
+header {
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    background-color: rgb(41, 41, 41) ;
+    color: white;
+    height: 80px;
+    z-index: 100;
+}
+.judul {
+    font-family: 'judul';
+    float: left;
+    padding: 15px 80px;
+    font-size: 40px;
+}
+.menu li{
+    position: relative;
+    list-style: none;
+    float: right ;
+    padding: 30px 0px;
+    margin-right: 40px;
+    margin-top: -10px;
+}
+.menu li:after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    left: 0;
+    bottom: 23px;
+    transition: 0.9s;
+    color: rgb(255, 255, 255);
+}
+.menu li:hover::after{
+    width: 100%;
+}
+.menu a {
+    margin-bottom: -10px;
+    display: block;
+    padding: 10px 0px;
+    font-family: 'menu';
+    text-decoration: none;
+    color: white;
+}
+.dropdown {
+    cursor: pointer;
+    margin-top: -15px;
+    font-family: 'menu';
+}
+.fa-sort-down{
+    font-size: 35px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(41, 41, 41);
+    min-width: 160px;
+    height: 190px;
+    z-index: 1;
+}
+
+/* Style the dropdown links */
+.dropdown-content a {
+    color: white;
+    padding: 15px 26px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+    background-color: rgb(0, 195, 255);
+    color: black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(24, 24, 24);
+    min-width: 160px;
+    z-index: 1;
+}
+.deskripsi {
+    margin-top: 120px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+span {
+    color: rgb(0, 195, 255);
+}
+.isi {
+    background-color: rgb(48, 48, 48);
+    height: 600px;
+    padding-top: 100px;
+    padding-left: 100px;
+    z-index: 0;
+}
+.deskripsi p{
+    width: 600px;
+}
+.sosmed {
+    position: absolute;
+    bottom: -50px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+}
+.sosmed a{
+    position: relative;
+    display: inline-flex;
+    text-decoration: none;
+    justify-content: center;
+    text-align: center;
+    color: rgb(0, 195, 255);
+    background: transparent;
+    border: 2px solid rgb(0, 195, 255);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: 100px;
+    z-index: 1;
+    overflow: hidden;
+    transition:0.5s;
+}
+.sosmed a:hover{
+    color: rgb(0, 0, 0);
+}
+.sosmed i{
+    margin-top: 10px;
+    font-size: 20px;
+    font: bold;
+}
+.sosmed a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(0, 195, 255);
+    z-index: -1;
+    transition: 0.5s;
+}
+.sosmed a:hover::before {
+    width: 100%;
+}
+.foto img{
+    position: absolute;
+    top: 196px;
+    left: 803px;
+    z-index: 0;
+}
+.tentang-saya {
+    height: 680px;
+    background-color: rgb(71, 71, 71);
+}
+.tentang {
+    font-family: 'menu';
+    position: absolute;
+    top: 1000px;
+    left: 40rem;
+}
+.tentang p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 600px;
+    font-size: 22px;
+}
+.tentang h1 {
+    font-size: 40px;
+}
+.foto-ipaw {
+    padding-top: 50px;
+    margin-left: 100px;
+}
+.riwayat-pendidikan {
+    position: relative;
+    margin-top: -25px;
+    background-color: rgb(48, 48, 48);
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 3;
+}
+.riwayat-pendidikan .card {
+    position:relative;
+    max-width: 300px;
+    height: 225px;
+    background-color: rgb(121, 121, 121);
+    margin: 260px 10px ;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 202px rgba(0, 0, 0, 0,5);
+    transition: 0.3s ease-in-out;
+}
+.riwayat-pendidikan .card:hover {
+    height: 450px;
+}
+.riwayat-pendidikan .card .foto-sekolah {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+    box-shadow: 0 5px 202px rgba(0, 0, 0, 0,5);
+}
+.riwayat-pendidikan .card .foto-sekolah img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+.riwayat-pendidikan .card .riwayat {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.riwayat-pendidikan .card:hover .riwayat {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}
+
+.jdl{
+    z-index: 2;
+}
+
+.jdl h1 {
+    position: absolute;
+    top: 100px;
+    left: 450px;
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(48, 48, 48);
+    font-family: 'menu';
+    font-size: 35px;
+}
+#skill {
+    padding-top: 100px;
+}
+.judul-skil {
+    font-family: 'menu';
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(71, 71, 71);
+    margin-top: -100px;
+    padding-bottom: 40px;
+    padding-top: 100px;
+}
+.skill-name {
+    font-family: 'menu';
+}
+.skil-active {
+    background-color: rgb(71, 71, 71);
+    height: 550px;
+    margin-top: -25px;
+    padding-right: 80px;
+    padding-left: 80px;
+}
+.skill-bar {
+    margin-bottom: 50px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 50px;
+    overflow: hidden; /* Mengatur overflow agar bar skill terlihat terpotong saat diisi */
+}
+.skill-level p{
+    float: right;
+    margin-top: 10px;
+    margin-right: 15px;
+    font-family: 'menu';
+}
+.skill-level {
+    height: 100%;
+    border-radius: 50px;
+    background-color: rgb(0, 195, 255);
+    animation: fillSkillBar 2s linear; /* Animasi berdurasi 2 detik menggunakan keyframes fillSkillBar */
+    animation-duration: 5s;
+}
+
+@keyframes fillSkillBar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: var(--skill-width, 0); /* Gunakan variabel CSS untuk lebar bar skill */
+    }
+}
+
+.skill-html {
+    --skill-width: 30%; /* Lebar awal untuk skill HTML menggunakan variabel CSS */
+    max-width: 30%;
+}
+
+.skill-css {
+    --skill-width: 20%; /* Lebar awal untuk skill CSS menggunakan variabel CSS */
+    max-width: 20%;
+}
+.skill-js {
+    --skill-width: 10%; /* Lebar awal untuk skill CSS menggunakan variabel CSS */
+    max-width: 10%;
+}
+.skill-UI-UX {
+    --skill-width: 15%; /* Lebar awal untuk skill CSS menggunakan variabel CSS */
+    max-width: 15%;
+}
+.umpan {
+    height: 60px;
+    background-color: rgb(71, 71, 71);
+}
+#eskul {
+    height: 1000px;
+}
+.eskul {
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(pic/eskul/GROUP-3.jpg);
+    background-image: cover;
+    background-size: cover;
+    height: 1000px;
+}
+.judul-eskul {
+    text-align: center;
+    font-family: 'menu';
+    font-size: 35px;
+    padding-top: 50px;
+}
+.foto-eskul {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+.isi-eskul {
+    text-align: center;
+    float: right;
+    width: 600px;
+    margin-top: 100px;
+    margin-right: 5rem;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.sesi-latihan {
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 750px;
+}
+.isi-seslat {
+    position: absolute;
+    text-align: center;
+    width: 600px;
+    margin-top: 350px;
+    margin-left: 100px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.sertijab {
+    margin-top: -400px;
+    margin-left: 100px;
+}
+.isi-sertijab {
+    text-align: center;
+    float: right;
+    width: 600px;
+    margin-top: -180px;
+    margin-right: 5rem;
+    padding-bottom: 150px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.portfolio {
+    top: -10;
+    background-color: rgb(71, 71, 71);
+    padding: 40px 0;
+}
+
+.judul-portfolio {
+    text-align: center;
+    font-family: 'menu';
+    font-size: 35px;
+    color: white;
+}
+
+.projects {
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project {
+    position: relative;
+    width: 325px;
+    height: 185px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    z-index: 0;
+}
+.project::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 195, 255, 0.7));
+    transition: 0.3s;
+    z-index: 1;
+}
+.project::after {
+    content: "\f06e"; /* Unicode untuk ikon mata */
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-size: 40px;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 2;
+}
+.project:hover::before {
+    height: 80%;
+}
+
+.project:hover::after {
+    opacity: 1;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project img:hover {
+    transform: scale(1.1);
+}
+.contact {
+    background-color: rgb(48, 48, 48);
+    padding: 40px 0;
+}
+
+.judul-contact {
+    text-align: center;
+    font-family: 'menu';
+    font-size: 35px;
+    color: white;
+}
+
+.form-kontak {
+    height: 500px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+form {
+    background: rgb(107, 107, 107);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+}
+
+.grup-form {
+    margin: 30px 50px;
+    text-align: left;
+}
+
+label {
+    padding: 90px 0px;
+    color: white;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+textarea {
+    height: 150px;
+}
+
+button {
+    background-color: rgb(0, 195, 255);
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgb(0, 149, 194);
+}
+section {
+    z-index: 1;
+}
+
+.c {
+    font-size: 18px;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+}

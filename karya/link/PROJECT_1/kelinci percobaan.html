@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN HEULA</title>
+</head>
+<style>
+    .judul {
+    font-size: 30px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    }
+    @font-face {
+        font-family: 'kece';
+        src: url(font/Sanset.ttf);
+    }
+    @font-face {
+        font-family: 'solihin';
+        src: url(font/SolidenTrial-Black.ttf);
+    }
+    @font-face {
+        font-family: 'judul';
+        src: url(font/Fatal\ Distraction.ttf);
+    }
+    body {
+    font-family: 'kece';
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #aaa9a9;
+}
+
+.login-container {
+    padding-top: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.login-box {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    width: 300px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.login-box h2 {
+    padding-bottom: 20px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.form-group input {
+    padding-top:15px ;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 92%;
+}
+
+.form-group button {
+    background-color: red;
+    color:black;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.form-group button:hover {
+    background-color: rgb(221, 0, 0);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+span {
+    color: red;
+}
+h3 {
+    font-family: 'kece';
+}
+a button{
+    font-weight: bold;
+    font-family: 'kece';
+}
+b {
+    font-family: 'judul';
+}
+h3 {
+    font-family: 'solihin';
+}
+.judul {
+    font-size: 50px;
+}
+.login {
+    text-decoration: none;
+    font-family: 'kece';
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #ff0000;
+    padding:10px 90px;
+    border-radius: 8px;
+}
+.login:hover {
+    background-color: #db0000;
+}
+</style>
+<body>
+    <div class="judul"><h3>WILUJENG SUMPING DI <b><span>RPLPINTAR</span></b></h3></div>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>LOGIN <span>HEULA</span></h2>
+            <form>
+                <div class="form-group">
+                    <label for="username">User<span>name</span></label>
+                    <input type="text" id="username" name="username" placeholder="               Masukkan Username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Pass<span>word</span></label>
+                    <input type="password" id="password" name="password" placeholder="               Masukkan Password" required>
+                </div>
+                <div class="form-group">
+                    <a href="project.html" class="login">L O G I N</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

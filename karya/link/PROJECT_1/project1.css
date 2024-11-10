@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'FATAL';
+    src: url(font/Fatal\ Distraction.ttf);
+}
+@font-face {
+    font-family: 'SANSET';
+    src: url(font/Sanset.ttf);
+}
+@font-face {
+    font-family: 'SPEKTON';
+    src: url(font/Spaceton.ttf);
+}
+@font-face {
+    font-family: 'robot';
+    src: url(font/Galhau_Heavy.ttf);
+}
+@font-face {
+    font-family: 'simpel';
+    src: url(font/SimplePlanner.ttf);
+}
+@font-face {
+    font-family: 'soliden';
+    src: url(font/SolidenTrial-Black.ttf);
+}
+.A {
+    background-color: black;
+    height: 90px;
+}
+.B {
+    background-color: #f4f4f4;
+    padding: 100px 0px;
+}
+.C {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    height: 230px;
+}
+#logo {
+    color: red;
+    font-family: FATAL ;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    font-size: 36px; 
+    float: left;
+}
+.A list {
+    float: left;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.A li {
+    color: black;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    padding-left: 23px;
+    padding-right: 23px;
+    float: right;
+    list-style: none;
+}
+#logbaw {
+    color: red;
+    font-family: 'FATAL';
+    font-size: 40px;
+    float: left;
+    padding-left: 50px;
+    padding-top: 40px;
+}
+.C li {
+    list-style: none;
+    padding-left: 1100px;
+    padding-top: 40px;
+}
+a {
+    font-family: 'SANSET';
+    text-decoration: none;
+    color: red;
+}
+.judul {
+    font-family: 'soliden';
+    font-size: 120px;
+}
+span {
+    color: red;
+}
+.BJ {
+    font-family: 'soliden';
+    padding-bottom: 50px;
+    font-size: 35px;
+}
+.Pembelajaran {
+    border-bottom: 2px solid black;
+    font-size: 25px;
+    color: red;
+    font-family: 'robot';
+    padding-bottom: 10px;
+}
+.apaaja {
+    height: 1050px;
+    padding-right: 24px;
+}
+.isi img {
+    border: 5px solid black;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+.isi:hover img{
+    transform: scale(1.15);
+}
+.isi {
+    padding-top: 100px;
+    float: left;
+    height: 500px;
+}
+#list a{
+    transition: all;
+    transition-duration: 400ms;
+    padding: 3px 0;
+    border-bottom:2px solid rgba(189, 0, 0, 0);
+
+}
+#list a:hover {
+    border-bottom:2px solid rgb(189, 0, 0);
+    color: rgb(189, 0, 0);
+}
+.kontak button {
+    padding: 15px 30px;
+    font-family: 'sanset';
+    border: none;
+    background-color: red;
+    font-size: 20px;
+    transition: 0.5s;
+}
+.kontak button:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.596);
+    background-color: rgb(204, 0, 0);
+}
+.B,.judul,.BJ,.isi,.Pembelajaran {
+    padding-left: 40px;
+}
+.pac {
+    font-size: 50px;
+    font-family: 'robot';
+    padding-left: 60px;
+}
+.pic {
+    font-size: 50px;
+    font-family: 'robot';
+    padding-left: 60px;
+}
+.puc {
+    font-size: 50px;
+    font-family: 'robot';
+    padding-left: 1px;
+}
+.pec {
+    font-size: 50px;
+    font-family: 'robot';
+    padding-left: 60px;
+}
+.isi img {
+    margin-right: 60px;
+    padding: 30px;
+}
+.kontak {
+    padding-bottom: 80px;
+}
+.kontak h3 {
+    font-size: 16px;
+    font-family: 'sanset';
+}
+.kontak p {
+    padding-bottom: 15px;
+}
+.hub {
+    padding-bottom: 15px;
+    border-bottom: 2px solid black;
+}
+.isi p {
+    padding-top: 0px;
+}
+textarea {
+    height: 180px;
+    width: 600px;
+}
+#lisbaw a{
+    transition: all;
+    transition-duration: 400ms;
+    padding: 3px 0;
+    border-bottom:2px solid rgba(189, 0, 0, 0);
+
+}
+#lisbaw a:hover {
+    border-bottom:2px solid rgb(189, 0, 0);
+    color: rgb(189, 0, 0);
+}
