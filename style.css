@@ -15,7 +15,6 @@ body {
     scroll-behavior: var(--scroll-duration) var(--scroll-timing-function);
     margin: 0;
     padding: 0;
-    top: -10;
     color: white;
 }
 header {
@@ -39,7 +38,6 @@ header {
     float: right ;
     padding: 30px 0px;
     margin-right: 40px;
-    margin-top: -10px;
 }
 .menu li:after{
     content: "";
@@ -65,7 +63,7 @@ header {
 }
 .dropdown {
     cursor: pointer;
-    margin-top: -15px;
+    margin-top: -5px;
     font-family: 'menu';
 }
 .fa-sort-down{
@@ -109,7 +107,7 @@ span {
     color: rgb(0, 195, 255);
 }
 .isi {
-    background-color: rgb(48, 48, 48);
+    background-color: black;
     height: 600px;
     padding-top: 100px;
     padding-left: 100px;
@@ -196,7 +194,7 @@ span {
 .riwayat-pendidikan {
     position: relative;
     margin-top: -25px;
-    background-color: rgb(48, 48, 48);
+    background-color: rgb(0, 0, 0);
     height: 900px;
     display: flex;
     justify-content: center;
@@ -208,7 +206,7 @@ span {
     position:relative;
     max-width: 300px;
     height: 225px;
-    background-color: rgb(121, 121, 121);
+    background-color: rgb(44, 39, 39);
     margin: 260px 10px ;
     padding: 20px 15px;
     display: flex;
@@ -238,7 +236,7 @@ span {
     margin-top: -140px;
     padding: 10px 15px;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     visibility: hidden;
     opacity: 0;
     transition: 0.3s ease-in-out;
@@ -261,7 +259,7 @@ span {
     justify-content: center;
     text-align: center;
     color: rgb(255, 255, 255);
-    background-color: rgb(48, 48, 48);
+    background-color: rgb(0, 0, 0);
     font-family: 'menu';
     font-size: 35px;
 }
@@ -339,14 +337,11 @@ span {
     height: 60px;
     background-color: rgb(71, 71, 71);
 }
-#eskul {
-    height: 1000px;
-}
 .eskul {
     background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(pic/eskul/GROUP-3.jpg);
     background-image: cover;
     background-size: cover;
-    height: 1000px;
+    height: 900px;
 }
 .judul-eskul {
     text-align: center;
@@ -383,7 +378,7 @@ span {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .sertijab {
-    margin-top: -400px;
+    margin-top: -300px;
     margin-left: 100px;
 }
 .isi-sertijab {
@@ -392,12 +387,11 @@ span {
     width: 600px;
     margin-top: -180px;
     margin-right: 5rem;
-    padding-bottom: 150px;
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .portfolio {
-    top: -10;
+    top: 0;
     background-color: rgb(71, 71, 71);
     padding: 40px 0;
 }
@@ -474,7 +468,7 @@ span {
     transform: scale(1.1);
 }
 .contact {
-    background-color: rgb(48, 48, 48);
+    background-color: rgb(0, 0, 0);
     padding: 40px 0;
 }
 
@@ -495,7 +489,7 @@ span {
 }
 
 form {
-    background: rgb(107, 107, 107);
+    background: rgb(71, 71, 71);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -531,22 +525,765 @@ button {
     background-color: rgb(0, 195, 255);
     color: white;
     border: none;
-    padding: 20px 40px;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: rgb(0, 149, 194);
+    background-color: rgb(0, 0, 0);
 }
 section {
     z-index: 1;
 }
 
-.c {
-    font-size: 18px;
-    justify-content: center;
+/* Base Media Query Variables */
+:root {
+  --mobile-breakpoint: 480px;
+  --tablet-breakpoint: 768px;
+  --large-tablet-breakpoint: 992px;
+  --primary-color: rgb(0, 195, 255);
+  --scroll-duration: 1.5s;
+  --scroll-timing-function: ease-in-out;
+}
+
+/* Ensure all sections take full width and have no gaps */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+section {
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Remove all gaps between sections */
+#home,
+#about-me,
+#riwayat-pendidikan,
+#skill,
+#eskul,
+#portofolio,
+#contact {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Fix for skill section */
+#skill {
+  padding-top: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.judul-skil {
+  font-family: "menu";
+  font-size: 20px;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(71, 71, 71);
+  margin-top: -100px;
+  padding-bottom: 40px;
+  padding-top: 100px;
+  width: 100%;
+}
+
+.skil-active {
+  background-color: rgb(71, 71, 71);
+  height: auto;
+  min-height: 550px;
+  margin-top: -25px;
+  padding: 0 80px 50px 80px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.skill-bar {
+  margin-bottom: 50px;
+  height: 40px;
+  background-color: #ccc;
+  border-radius: 50px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.skill-level p {
+  float: right;
+  margin-top: 10px;
+  margin-right: 15px;
+  font-family: "menu";
+}
+
+.skill-level {
+  height: 100%;
+  border-radius: 50px;
+  background-color: rgb(0, 195, 255);
+  animation: fillSkillBar 2s ease-out forwards;
+}
+
+@keyframes fillSkillBar {
+  from { width: 0; }
+  to { width: var(--skill-width, 0); }
+}
+
+.skill-html {
+  --skill-width: 30%;
+  max-width: 30%;
+}
+
+.skill-css {
+  --skill-width: 20%;
+  max-width: 20%;
+}
+
+.skill-js {
+  --skill-width: 10%;
+  max-width: 10%;
+}
+
+.skill-UI-UX {
+  --skill-width: 15%;
+  max-width: 15%;
+}
+
+/* Fix for eskul section */
+.umpan {
+  height: 60px;
+  background-color: rgb(71, 71, 71);
+}
+
+.eskul {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(pic/eskul/GROUP-3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: auto;
+  min-height: 900px;
+  padding-bottom: 350px;
+  position: relative;
+}
+
+.judul-eskul {
+  text-align: center;
+  font-family: "menu";
+  font-size: 35px;
+  padding-top: 50px;
+  width: 100%;
+}
+
+.foto-eskul {
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+.isi-eskul {
+  text-align: center;
+  float: right;
+  width: 600px;
+  margin-top: 100px;
+  margin-right: 5rem;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sesi-latihan {
+  position: absolute;
+  margin-top: 300px;
+  margin-left: 750px;
+}
+
+.isi-seslat {
+  position: absolute;
+  text-align: center;
+  width: 600px;
+  margin-top: 350px;
+  margin-left: 100px;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Fix for the last photo in eskul section */
+.sertijab {
+  margin-top: -300px;
+  width: 100%;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(pic/eskul/sertijab.jpeg);
+  background-size: cover;
+  background-position: center;
+  padding: 150px 100px;
+  box-sizing: border-box;
+}
+
+.isi-sertijab {
+  text-align: center;
+  width: 600px;
+  margin: 0 auto;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Hide the original image */
+.foto-sertijab {
+  display: none;
+}
+
+/* Fix for portfolio section */
+.portfolio {
+  top: 0;
+  background-color: rgb(71, 71, 71);
+  padding: 40px 0;
+  width: 100%;
+}
+
+.judul-portfolio {
+  text-align: center;
+  font-family: "menu";
+  font-size: 35px;
+  color: white;
+  width: 100%;
+}
+
+/* Fix for portfolio items in responsive mode */
+.projects {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px auto;
+  padding: 0 20px 50px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.project {
+  position: relative;
+  width: 325px;
+  height: 185px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.project::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 195, 255, 0.7)
+  );
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.project::after {
+  content: "\f06e"; /* Unicode for eye icon */
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-size: 40px;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.project:hover::before {
+  height: 80%;
+}
+
+.project:hover::after {
+  opacity: 1;
+}
+
+.project:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project img:hover {
+  transform: scale(1.1);
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 200;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Fix content wrapper for mobile */
+.content-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Global Responsive Adjustments */
+@media screen and (max-width: 992px) {
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Add padding for fixed header */
+  #home {
+    padding-top: 80px !important;
+  }
+
+  /* Show hamburger menu */
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide default menu */
+  .menu {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(41, 41, 41, 0.97);
+    transition: all 0.4s ease;
+    z-index: 99;
+  }
+
+  /* Show menu when active */
+  .menu.active {
+    right: 0;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    margin: 0;
+    height: 100%;
+  }
+
+  .menu li {
+    float: none;
+    padding: 15px 0;
+    margin: 10px 0;
+    width: 80%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .menu li:last-child {
+    border-bottom: none;
+  }
+
+  /* Hamburger animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+
+  /* Home section responsive */
+  .foto img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    position: static;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .deskripsi {
+    margin-top: 20px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .deskripsi p {
+    width: 100%;
+  }
+
+  .sosmed {
+    position: relative;
+    margin: 20px auto;
+    width: 60%;
+    bottom: auto;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .isi {
+    padding: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Header and Navigation Responsive */
+  header {
+    height: 80px;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .judul {
+    float: none;
+    padding: 20px;
+    font-size: 32px;
+  }
+
+  /* Dropdown menu adjustments for mobile */
+  .dropdown-content {
+    position: static;
+    width: 100%;
+    height: auto;
+    background-color: rgba(20, 20, 20, 0.8);
+    display: none;
+  }
+
+  .dropdown-content a {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .dropdown.active .dropdown-content {
+    display: block;
+  }
+
+  /* About Me Section Responsive */
+  .tentang-saya {
+    height: auto;
+    padding: 30px 10px 50px !important;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .foto-ipaw {
+    margin: 0 auto;
     text-align: center;
     padding-top: 20px;
+    width: 100%;
+  }
+
+  .foto-ipaw img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .tentang {
+    position: static;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    box-sizing: border-box;
+  }
+
+  .tentang p {
+    width: 100%;
+    font-size: 18px;
+    box-sizing: border-box;
+  }
+
+  /* Education History Responsive */
+  .riwayat-pendidikan {
+    height: auto;
+    padding: 50px 10px !important;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .jdl h1 {
+    position: static;
+    margin: 20px auto;
+    text-align: center;
+    width: 100%;
+    left: 0;
+  }
+
+  .riwayat-pendidikan .card {
+    margin: 60px auto;
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .riwayat-pendidikan .card .foto-sekolah {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    top: -60px;
+  }
+
+  .riwayat-pendidikan .card .foto-sekolah img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Skills Section Responsive */
+  .judul-skil {
+    padding-top: 30px !important;
+    width: 100%;
+  }
+
+  .skil-active {
+    padding: 20px 20px 50px !important;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .skill {
+    width: 100%;
+  }
+
+  /* Extracurricular Section Responsive */
+  .umpan {
+    height: 0;
+  }
+
+  .eskul {
+    height: auto;
+    padding-bottom: 50px !important;
+    width: 100%;
+    min-height: auto;
+  }
+
+  .judul-eskul {
+    width: 100%;
+    padding-top: 30px !important;
+  }
+
+  .foto-eskul, .sesi-latihan {
+    position: static;
+    margin: 30px auto;
+    text-align: center;
+    width: 90%;
+  }
+
+  .foto-eskul img, .sesi-latihan img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .isi-eskul, .isi-seslat {
+    position: static;
+    float: none;
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .sertijab {
+    margin: 0;
+    padding: 50px 20px !important;
+    text-align: center;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .isi-sertijab {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Portfolio Section Responsive */
+  .portfolio {
+    width: 100%;
+    padding: 40px 0 !important;
+  }
+
+  .judul-portfolio {
+    width: 100%;
+  }
+
+  .projects {
+    height: auto;
+    width: 100%;
+    padding: 0 20px 50px;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+  .project {
+    width: 45%;
+    height: auto;
+    max-width: 325px;
+    margin: 10px auto;
+  }
+
+  /* Contact Form Responsive */
+  .contact {
+    width: 100%;
+    padding: 40px 0 !important;
+  }
+
+  .judul-contact {
+    width: 100%;
+  }
+
+  .form-kontak {
+    height: auto;
+    padding: 20px !important;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .grup-form {
+    margin: 20px;
+    width: auto;
+  }
+
+  /* Make sure all sections fill width properly */
+  section > div {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* Mobile Specific Adjustments */
+@media screen and (max-width: 480px) {
+  .judul {
+    font-size: 28px;
+  }
+
+  .deskripsi h1 {
+    font-size: 24px;
+  }
+
+  .tentang h1,
+  .jdl h1,
+  .judul-skil h1,
+  .judul-eskul,
+  .judul-portfolio h1,
+  .judul-contact h1 {
+    font-size: 28px;
+  }
+
+  .tentang p,
+  .isi-eskul p,
+  .isi-seslat p,
+  .isi-sertijab p {
+    font-size: 16px;
+  }
+
+  .sosmed {
+    width: 80%;
+  }
+
+  .sosmed a {
+    width: 35px;
+    height: 35px;
+  }
+
+  .sosmed i {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+
+  .riwayat-pendidikan .card {
+    width: 90%;
+  }
+
+  .riwayat-pendidikan .card:hover {
+    height: 500px;
+  }
+
+  .project {
+    width: 90%;
+    max-width: 300px;
+    margin: 10px auto;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .grup-form {
+    margin: 15px 10px;
+  }
+}
+
+/* Additional tablet-specific adjustments */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .foto img {
+    width: 300px;
+  }
+
+  .projects {
+    gap: 15px;
+  }
+
+  .project {
+    width: 45%;
+    margin: 10px auto;
+  }
+  
+  .judul-skil h1, 
+  .judul-portfolio h1, 
+  .judul-contact h1,
+  .judul-eskul {
+    font-size: 30px;
+    padding: 0 10px;
+  }
 }
