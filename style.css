@@ -1287,3 +1287,53 @@ section {
     padding: 0 10px;
   }
 }
+
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content p {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.footer-sosmed {
+  margin-top: 10px;
+}
+
+.footer-sosmed a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.footer-sosmed a:hover {
+  color: var(--primary-color);
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 480px) {
+  .footer-content {
+    padding: 10px;
+  }
+
+  .footer-sosmed a {
+    margin: 0 8px;
+    font-size: 16px;
+  }
+}
